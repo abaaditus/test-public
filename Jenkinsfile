@@ -3,8 +3,8 @@ pipeline {
     tools { nodejs "nodejs"}
     stages {
         stage('Pull files'){
-	    echo 'For build trigger purposes'
             steps {
+		echo 'Sample git push trigger'
                 echo 'Pulling Jotto..'
                 git branch: 'main', credentialsId: '84bd03a8-d6a6-43fc-9a01-6ab100ac3b31', url: 'https://github.com/abaaditus/jotto.git'
             }
